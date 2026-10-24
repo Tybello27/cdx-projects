@@ -2,5 +2,5 @@
   { "scene": "hook", "start": 0.55, "end": 2.960667, "text": "That missed call? It could have been your next booking." },
   { "scene": "problem", "start": 5.0, "end": 8.072, "text": "But when you're with a client, you can't always answer the phone." },
   { "scene": "solution", "start": 10.05, "end": 13.143333, "text": "So I built an AI receptionist. Listen to this." },
-  { "scene": "cta", "start": 25.1, "end": 31.201333, "text": "Your team stays focused. Incoming calls still get answered. Want to hear the full demo? DM demo." }
+  { "scene": "cta", "start": 25.1, "end": 34.145333, "text": "Your team stays focused. Incoming calls still get answered. Want to hear the full AI receptionist demo? Comment DEMO and I'll send it to you." }
 ]

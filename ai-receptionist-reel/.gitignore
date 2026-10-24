@@ -10,6 +10,7 @@ renders/
 assets/audio/demo/*
 assets/audio/voice-tests/
 storyboard/render-check/
+storyboard/cta-update-check/
 models/
 *.onnx
 *.bin

@@ -1,7 +1,7 @@
 {
   "project": "AI Receptionist — Medspa Reel",
   "version": 1,
-  "canvas": { "width": 1080, "height": 1920, "fps": 30, "duration": 36.2 },
+  "canvas": { "width": 1080, "height": 1920, "fps": 30, "duration": 37.2 },
   "niche": "medspa",
   "handle": "@buildwith_ty",
   "voice": "af_heart",
@@ -23,7 +23,7 @@
     { "id": "problem", "start": 4.2, "duration": 6.1, "headline": "BUSY WITH A CLIENT?" },
     { "id": "solution", "start": 9.7, "duration": 4.6, "headline": "MEET YOUR AI RECEPTIONIST." },
     { "id": "demo", "start": 13.6, "duration": 11.4, "headline": "DEMO AUDIO PENDING" },
-    { "id": "cta", "start": 24.4, "duration": 11.8, "headline": "LESS INTERRUPTION." }
+    { "id": "cta", "start": 24.4, "duration": 12.8, "headline": "WANT TO HEAR THE FULL DEMO?", "action": "COMMENT \"DEMO\" BELOW" }
   ],
   "audio": {
     "narration": [

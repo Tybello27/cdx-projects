@@ -4,6 +4,8 @@ A reusable 1080×1920 HyperFrames motion-graphics system for promoting an AI rec
 
 The current output is intentionally a **review draft**: the real receptionist call has not been supplied, so Scene 4 is labeled `DEMO AUDIO PENDING`. No synthetic customer or receptionist dialogue is used.
 
+The final CTA asks viewers to comment `DEMO` so `@buildwith_ty` can send the full demonstration. It does not claim that automated comment replies are connected.
+
 ## Quick start
 
 Requirements: Node.js 22+, npm, FFmpeg/FFprobe, Chromium, Python 3.8+, and the project `.venv` described below.

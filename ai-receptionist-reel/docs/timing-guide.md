@@ -1,6 +1,6 @@
 # Narration and demo timing guide
 
-The review draft runs **36.20 seconds at 30 fps**.
+The review draft runs **37.20 seconds at 30 fps**.
 
 | Scene | Global time | Narration time | Purpose |
 | --- | ---: | ---: | --- |
@@ -8,7 +8,7 @@ The review draft runs **36.20 seconds at 30 fps**.
 | Problem | 4.20–10.30 | 5.00–8.072 | Medspa professional stays focused on treatment |
 | Solution | 9.70–14.30 | 10.05–13.143 | AI receptionist connects the call |
 | Demo placeholder | 13.60–25.00 | none | Reserved for the authentic mixed call recording |
-| CTA | 24.40–36.20 | 25.10–31.201 | Benefit statement and DM prompt |
+| CTA | 24.40–37.20 | 25.10–34.145 | Benefit statement and comment-`DEMO` prompt |
 
 Transitions overlap adjacent visual clips by 0.5–0.7 seconds. Narration never overlaps the demo slot.
 
@@ -32,3 +32,5 @@ Transitions overlap adjacent visual clips by 0.5–0.7 seconds. Narration never 
 ## Caption synchronization
 
 Narration captions use the exact supplied script and each scene WAV's measured duration. They are available in JSON, SRT, and VTT. The real call must use local Whisper word timestamps followed by a human speaker-turn review; Whisper alone is not treated as diarization.
+
+The final CTA asks viewers to comment `DEMO` so the creator can send the recording. It does not claim that an automatic comment reply is connected.
