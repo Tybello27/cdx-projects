@@ -1,0 +1,15 @@
+1
+00:00:00,550 --> 00:00:02,961
+That missed call? It could have been your next booking.
+
+2
+00:00:05,000 --> 00:00:08,072
+But when you're with a client, you can't always answer the phone.
+
+3
+00:00:10,050 --> 00:00:13,143
+So I built an AI receptionist. Listen to this.
+
+4
+00:00:25,100 --> 00:00:31,201
+Your team stays focused. Incoming calls still get answered. Want to hear the full demo? DM demo.

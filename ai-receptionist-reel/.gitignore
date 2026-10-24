@@ -1,0 +1,17 @@
+node_modules/
+.venv/
+.hyperframes/
+.cache/
+renders/
+*.mp4
+*.webm
+*.mov
+*.zip
+assets/audio/demo/*
+assets/audio/voice-tests/
+storyboard/render-check/
+models/
+*.onnx
+*.bin
+.DS_Store
+*.log

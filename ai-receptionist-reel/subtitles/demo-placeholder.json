@@ -1,0 +1,7 @@
+{
+  "status": "pending_real_recording",
+  "audioPath": "assets/audio/demo/real-ai-receptionist-call.wav",
+  "transcript": [],
+  "speakerTurns": [],
+  "instructions": "Replace only after listening to the real call. Whisper provides words and timestamps; speaker assignment must be manually verified."
+}

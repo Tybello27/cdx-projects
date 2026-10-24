@@ -1,0 +1,56 @@
+<template id="scene-demo-template">
+  <div id="root" data-composition-id="scene-demo" data-width="1080" data-height="1920" class="scene demo-scene">
+    <div class="grid-lines" data-layout-ignore></div>
+    <div class="scene-content">
+      <div class="demo-header"><div><span class="pending-dot"></span><b>DEMO AUDIO PENDING</b></div><small>REAL RECORDING SLOT / 10.8 SEC</small></div>
+      <h1>THE PROOF<br><em>GOES HERE.</em></h1>
+      <div class="call-stage">
+        <div class="call-meta"><div><small>CALL STATUS</small><strong>Ready for recording</strong></div><div class="call-time">--:--</div></div>
+        <div class="speaker-card customer">
+          <div class="speaker-id"><span>ME</span><div><small>CUSTOMER</small><strong>Your real voice</strong></div></div>
+          <div class="speaker-wave customer-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="speaker-card ai">
+          <div class="speaker-id"><span>AI</span><div><small>AI RECEPTIONIST</small><strong>Actual system response</strong></div></div>
+          <div class="speaker-wave ai-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="subtitle-slot"><small>CAPTION TRACK</small><p>Actual words will appear here after local Whisper transcription and manual speaker verification.</p></div>
+        <div class="calendar-slot"><div><span>CALENDAR</span><strong>Integration-ready</strong></div><div class="days"><i>M</i><i>T</i><i>W</i><i>T</i><i>F</i></div></div>
+      </div>
+      <div class="truth-note"><span>NO SYNTHETIC DIALOGUE</span><p>This review draft reserves the complete interface and timing for your authentic medspa call.</p></div>
+    </div>
+    <style>
+      @font-face{font-family:"Manrope";src:url("../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-style:normal}
+      #root{position:relative;width:1080px;height:1920px;overflow:hidden;background:#101B17;color:#F5F0E9;font-family:"Manrope",sans-serif}#root *{box-sizing:border-box}.scene-content{width:100%;height:100%;padding:180px 72px 250px;display:flex;flex-direction:column;gap:28px;position:relative;z-index:2}
+      .grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(120,210,184,.055) 1px,rgba(120,210,184,0) 1px),linear-gradient(90deg,rgba(120,210,184,.055) 1px,rgba(120,210,184,0) 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,black,rgba(0,0,0,.2))}
+      .demo-header{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid rgba(245,240,233,.2);font-size:18px;letter-spacing:.12em}.demo-header div{display:flex;align-items:center;gap:12px}.demo-header b{color:#F0B2BF}.demo-header small{font-size:16px;color:#C7D6CD}.pending-dot{width:12px;height:12px;border-radius:50%;background:#782A3B;box-shadow:0 0 0 8px rgba(120,42,59,.18)}
+      h1{margin:10px 0 0;font-size:96px;line-height:.92;letter-spacing:-.055em;font-weight:800}h1 em{font-style:normal;color:#78D2B8}
+      .call-stage{width:100%;min-height:900px;padding:32px;border-radius:44px;background:rgba(245,240,233,.065);border:1px solid rgba(245,240,233,.18);box-shadow:0 34px 90px rgba(0,0,0,.34);display:flex;flex-direction:column;gap:20px}
+      .call-meta{display:flex;justify-content:space-between;align-items:center;padding:2px 4px 18px;border-bottom:1px solid rgba(245,240,233,.14)}.call-meta small{display:block;color:#C7D6CD;font-size:15px;letter-spacing:.15em}.call-meta strong{display:block;margin-top:5px;font-size:24px}.call-time{font-size:34px;font-variant-numeric:tabular-nums;color:#78D2B8}
+      .speaker-card{padding:24px;border-radius:28px;border:1px solid rgba(245,240,233,.12);background:rgba(0,0,0,.16)}.speaker-card.ai{border-color:rgba(0,140,105,.52);background:rgba(0,140,105,.08)}.speaker-id{display:flex;align-items:center;gap:18px}.speaker-id>span{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;background:#F5F0E9;color:#17251F;font-size:22px;font-weight:800}.ai .speaker-id>span{background:#008C69;color:#F5F0E9}.speaker-id small{display:block;color:#C7D6CD;font-size:14px;letter-spacing:.14em}.speaker-id strong{display:block;margin-top:4px;font-size:23px}
+      .speaker-wave{height:90px;display:flex;align-items:center;gap:9px;margin-top:18px}.speaker-wave i{flex:1;max-width:12px;height:26px;border-radius:12px;background:#D7DED9;opacity:.7;transform-origin:center}.speaker-wave i:nth-child(3n){height:54px}.speaker-wave i:nth-child(4n){height:70px}.ai-wave i{background:#78D2B8;opacity:.9}
+      .subtitle-slot{padding:26px;border-radius:24px;background:#F5F0E9;color:#17251F;min-height:130px}.subtitle-slot small{font-size:14px;letter-spacing:.15em;color:#007D5E;font-weight:800}.subtitle-slot p{margin:10px 0 0;font-size:23px;line-height:1.32;font-weight:600;letter-spacing:-.02em}
+      .calendar-slot{display:flex;justify-content:space-between;align-items:center;padding:22px 24px;border:1px solid rgba(245,240,233,.13);border-radius:24px}.calendar-slot span{display:block;font-size:14px;letter-spacing:.14em;color:#C7D6CD}.calendar-slot strong{display:block;margin-top:5px;font-size:23px}.days{display:flex;gap:8px}.days i{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:rgba(245,240,233,.08);font-style:normal;font-size:15px}.days i:last-child{border:1px solid #008C69;color:#78D2B8}
+      .truth-note{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start;padding-top:18px;border-top:1px solid rgba(245,240,233,.18)}.truth-note span{font-size:17px;letter-spacing:.12em;color:#F0B2BF;font-weight:800}.truth-note p{margin:0;color:#C7D6CD;font-size:21px;line-height:1.38}
+    </style>
+    <script src="../assets/vendor/gsap-3.14.2.min.js"></script>
+    <script>
+      window.__timelines=window.__timelines||{};const demoTl=gsap.timeline({paused:true});
+      demoTl.from(".demo-scene .demo-header",{scaleX:.5,opacity:0,transformOrigin:"left",duration:.6,ease:"expo.out"},.18);
+      demoTl.from(".demo-scene h1",{x:-64,opacity:0,duration:.72,ease:"power4.out"},.32);
+      demoTl.from(".demo-scene .call-stage",{y:90,opacity:0,scale:.97,duration:.88,ease:"circ.out"},.55);
+      demoTl.from(".demo-scene .call-meta",{y:-20,opacity:0,duration:.48,ease:"power3.out"},.86);
+      demoTl.from(".demo-scene .speaker-card.customer",{x:-65,opacity:0,duration:.56,ease:"expo.out"},1.02);
+      demoTl.from(".demo-scene .speaker-card.ai",{x:65,opacity:0,duration:.56,ease:"expo.out"},1.18);
+      demoTl.from(".demo-scene .subtitle-slot",{scale:.94,opacity:0,duration:.5,ease:"back.out(1.28)"},1.42);
+      demoTl.from(".demo-scene .calendar-slot",{y:28,opacity:0,duration:.48,ease:"power2.out"},1.58);
+      demoTl.from(".demo-scene .truth-note",{y:24,opacity:0,duration:.52,ease:"sine.out"},1.78);
+      demoTl.from(".demo-scene .customer-wave i",{scaleY:.12,opacity:0,duration:.32,stagger:.025,ease:"sine.out"},1.2);
+      demoTl.from(".demo-scene .ai-wave i",{scaleY:.12,opacity:0,duration:.32,stagger:.025,ease:"sine.out"},1.42);
+      demoTl.to(".demo-scene .customer-wave i",{scaleY:(i)=>[.6,.82,1.2,.72,1.35,.68,1.08,.78,1.25,.62,1.12,.75,1.3,.7,.95,.66][i],duration:.55,stagger:.02,yoyo:true,repeat:6,ease:"sine.inOut"},2.15);
+      demoTl.to(".demo-scene .ai-wave i",{scaleY:(i)=>[.72,1.2,.66,1.35,.8,1.08,.64,1.28,.75,1.15,.7,1.38,.82,1.05,.68,1.22][i],duration:.48,stagger:.018,yoyo:true,repeat:7,ease:"sine.inOut"},5.65);
+      demoTl.to(".demo-scene .pending-dot",{scale:1.4,opacity:.55,duration:.7,yoyo:true,repeat:10,ease:"sine.inOut"},2.0);
+      window.__timelines["scene-demo"]=demoTl;demoTl.seek(0);
+    </script>
+  </div>
+</template>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="assets/vendor/gsap-3.14.2.min.js"></script>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #17251F; }
+      #reel { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #17251F; }
+      .scene-clip { position: absolute; inset: 0; width: 1080px; height: 1920px; overflow: hidden; transform-origin: 50% 50%; }
+      #scene-01 { z-index: 1; }
+      #scene-02 { z-index: 2; opacity: 0; }
+      #scene-03 { z-index: 3; opacity: 0; }
+      #scene-04 { z-index: 4; opacity: 0; }
+      #scene-05 { z-index: 5; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="reel" data-composition-id="ai-receptionist-reel" data-start="0" data-duration="36.2" data-width="1080" data-height="1920">
+      <div id="scene-01" class="clip scene-clip" data-composition-id="scene-hook" data-composition-src="compositions/scene-01-hook.html" data-start="0" data-duration="4.7" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div id="scene-02" class="clip scene-clip" data-composition-id="scene-problem" data-composition-src="compositions/scene-02-problem.html" data-start="4.2" data-duration="6.1" data-track-index="2" data-width="1080" data-height="1920"></div>
+      <div id="scene-03" class="clip scene-clip" data-composition-id="scene-solution" data-composition-src="compositions/scene-03-solution.html" data-start="9.7" data-duration="4.6" data-track-index="3" data-width="1080" data-height="1920"></div>
+      <div id="scene-04" class="clip scene-clip" data-composition-id="scene-demo" data-composition-src="compositions/scene-04-demo.html" data-start="13.6" data-duration="11.4" data-track-index="4" data-width="1080" data-height="1920"></div>
+      <div id="scene-05" class="clip scene-clip" data-composition-id="scene-cta" data-composition-src="compositions/scene-05-cta.html" data-start="24.4" data-duration="11.8" data-track-index="5" data-width="1080" data-height="1920"></div>
+
+      <audio id="music-a" data-start="0" data-duration="13.6" data-track-index="20" data-media-start="0" data-volume="0.72" src="assets/audio/music/original-ambient-bed.wav"></audio>
+      <audio id="music-b" data-start="13.6" data-duration="10.8" data-track-index="21" data-media-start="13.6" data-volume="0.28" src="assets/audio/music/original-ambient-bed.wav"></audio>
+      <audio id="music-c" data-start="24.4" data-duration="11.6" data-track-index="22" data-media-start="24.4" data-volume="0.72" src="assets/audio/music/original-ambient-bed.wav"></audio>
+      <audio id="ring" data-start="0.15" data-duration="2.65" data-track-index="23" data-volume="0.55" src="assets/audio/sfx/phone-ring.wav"></audio>
+      <audio id="missed-tone" data-start="3.2" data-duration="0.45" data-track-index="24" data-volume="0.55" src="assets/audio/sfx/notification.wav"></audio>
+      <audio id="connect-tone" data-start="13.55" data-duration="0.55" data-track-index="25" data-volume="0.52" src="assets/audio/sfx/call-connect.wav"></audio>
+      <audio id="narration-hook" data-start="0.55" data-duration="2.410667" data-track-index="30" data-volume="1" src="assets/audio/narration/scene-01-hook.wav"></audio>
+      <audio id="narration-problem" data-start="5" data-duration="3.072" data-track-index="31" data-volume="1" src="assets/audio/narration/scene-02-problem.wav"></audio>
+      <audio id="narration-solution" data-start="10.05" data-duration="3.093333" data-track-index="32" data-volume="1" src="assets/audio/narration/scene-03-solution.wav"></audio>
+      <audio id="narration-cta" data-start="25.1" data-duration="6.101333" data-track-index="33" data-volume="1" src="assets/audio/narration/scene-05-cta.wav"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.to("#scene-01", { x: -1080, duration: 0.5, ease: "power3.inOut" }, 4.2);
+      tl.fromTo("#scene-02", { x: 1080, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 4.2);
+      tl.to("#scene-02", { x: -1080, duration: 0.54, ease: "power3.inOut" }, 9.7);
+      tl.fromTo("#scene-03", { x: 1080, opacity: 1 }, { x: 0, opacity: 1, duration: 0.54, ease: "power3.inOut" }, 9.7);
+      tl.to("#scene-03", { scale: 2.2, opacity: 0, filter: "blur(7px)", duration: 0.46, ease: "power3.in" }, 13.6);
+      tl.fromTo("#scene-04", { scale: 0.56, opacity: 0, filter: "blur(7px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.5, ease: "power3.out" }, 13.73);
+      tl.to("#scene-04", { filter: "blur(22px)", scale: 1.045, opacity: 0, duration: 0.72, ease: "power1.in" }, 24.4);
+      tl.fromTo("#scene-05", { filter: "blur(20px)", scale: 0.96, opacity: 0 }, { filter: "blur(0px)", scale: 1, opacity: 1, duration: 0.78, ease: "power1.out" }, 24.52);
+      window.__timelines["ai-receptionist-reel"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

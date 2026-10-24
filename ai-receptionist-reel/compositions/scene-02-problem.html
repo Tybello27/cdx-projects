@@ -1,0 +1,92 @@
+<template id="scene-problem-template">
+  <div id="root" data-composition-id="scene-problem" data-width="1080" data-height="1920" class="scene problem-scene">
+    <div class="room-glow" data-layout-ignore></div>
+    <div class="scene-content">
+      <div class="topline"><span>MEDSPA / 02</span><b>THE REALITY</b></div>
+      <h1>BUSY WITH<br>A <em>CLIENT?</em></h1>
+      <div class="treatment-card">
+        <div class="window"><i></i><i></i><i></i></div>
+        <div class="plant"><span></span><span></span><span></span><b></b></div>
+        <div class="esthetician">
+          <div class="hair"></div><div class="head"></div><div class="body"></div><div class="arm arm-a"></div><div class="arm arm-b"></div>
+        </div>
+        <div class="treatment-bed"><div class="client-head"></div><div class="client-body"></div><div class="towel"></div></div>
+        <div class="tool-tray"><div></div><span></span><span></span><span></span></div>
+        <div class="focus-tag"><span></span> TREATMENT IN PROGRESS</div>
+      </div>
+      <div class="incoming-chip">
+        <div class="chip-icon">⌕</div><div><small>INCOMING CALL</small><strong>Potential new client</strong></div><b>RINGING</b>
+      </div>
+      <div class="insight"><span>Hands-on care needs</span><strong>UNDIVIDED ATTENTION.</strong></div>
+    </div>
+    <div class="caption" id="problem-cap-1">But when you're <mark>with a client,</mark></div>
+    <div class="caption" id="problem-cap-2">you can't always</div>
+    <div class="caption" id="problem-cap-3">answer the phone.</div>
+    <style>
+      @font-face { font-family: "Manrope"; src: url("../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2"); font-weight: 200 800; font-style: normal; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #F5F0E9; color: #17251F; font-family: "Manrope", sans-serif; }
+      #root * { box-sizing: border-box; }
+      #root .scene-content { width: 100%; height: 100%; padding: 180px 76px 310px; display: flex; flex-direction: column; gap: 30px; position: relative; z-index: 2; }
+      .room-glow { position: absolute; width: 780px; height: 780px; right: -320px; top: 300px; border-radius: 50%; background: #BFD9CC; filter: blur(120px); opacity: .45; }
+      .topline { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #17251F; padding-bottom: 18px; font-size: 20px; letter-spacing: .14em; }
+      .topline b { color: #008C69; }
+      h1 { margin: 10px 0 0; max-width: 900px; font-size: 104px; line-height: .92; letter-spacing: -.055em; font-weight: 800; }
+      h1 em { color: #008C69; font-style: normal; }
+      .treatment-card { width: 100%; height: 760px; border-radius: 48px; overflow: hidden; position: relative; background: #D9D0C5; box-shadow: 0 30px 80px rgba(23,37,31,.18); border: 1px solid rgba(23,37,31,.11); }
+      .window { position: absolute; inset: 0 0 auto 0; height: 410px; display: flex; gap: 12px; padding: 36px; }
+      .window i { flex: 1; background: linear-gradient(180deg,#F8F2E9,#C7D6CD); border-radius: 24px 24px 6px 6px; border: 1px solid rgba(23,37,31,.1); }
+      .window:after { content: ""; position: absolute; left: 0; right: 0; bottom: -120px; height: 280px; background: linear-gradient(180deg,rgba(245,240,233,0),#B7A99B); }
+      .plant { position: absolute; right: 50px; bottom: 120px; width: 150px; height: 260px; z-index: 3; }
+      .plant b { position: absolute; bottom: 0; left: 28px; width: 95px; height: 100px; border-radius: 18px 18px 34px 34px; background: #786B5F; }
+      .plant span { position: absolute; width: 54px; height: 135px; border-radius: 100% 0 100% 0; background: #476457; transform-origin: bottom; bottom: 82px; left: 54px; }
+      .plant span:nth-child(1){ transform: rotate(-42deg); }.plant span:nth-child(2){ transform: rotate(-10deg); height: 160px; }.plant span:nth-child(3){ transform: rotate(35deg); }
+      .esthetician { position: absolute; left: 390px; top: 240px; width: 260px; height: 430px; z-index: 5; }
+      .head { position: absolute; width: 92px; height: 112px; left: 82px; top: 12px; border-radius: 48% 48% 44% 44%; background: #B98267; z-index: 3; }
+      .hair { position: absolute; width: 118px; height: 98px; left: 67px; top: 0; border-radius: 55px 55px 30px 30px; background: #3D2E29; z-index: 4; }
+      .hair:after { content:""; position:absolute; right:-22px; top:16px; width:55px; height:55px; border-radius:50%; background:#3D2E29; }
+      .body { position: absolute; width: 210px; height: 310px; left: 24px; top: 112px; border-radius: 80px 80px 30px 30px; background: #17251F; }
+      .arm { position: absolute; width: 54px; height: 255px; top: 150px; border-radius: 30px; background: #B98267; transform-origin: top center; z-index: 6; }
+      .arm-a { left: 50px; transform: rotate(42deg); }.arm-b { right: 54px; transform: rotate(-35deg); }
+      .treatment-bed { position: absolute; left: 70px; bottom: 66px; width: 620px; height: 210px; background: #EEE6DD; border-radius: 105px 42px 42px 42px; box-shadow: 0 24px 45px rgba(23,37,31,.18); z-index: 4; }
+      .client-head { position:absolute; width:110px; height:110px; right:100px; top:-44px; border-radius:50%; background:#C99479; transform:rotate(-8deg); }
+      .client-head:after { content:""; position:absolute; inset:-5px -4px 48px -4px; border-radius:60px 60px 18px 18px; background:#6D4C43; }
+      .client-body { position:absolute; left:50px; right:80px; bottom:30px; height:105px; border-radius:70px 70px 24px 24px; background:#C7D6CD; }
+      .towel { position:absolute; left:120px; bottom:20px; width:280px; height:78px; border-radius:30px; background:#F5F0E9; }
+      .tool-tray { position:absolute; left:28px; top:260px; width:130px; height:200px; z-index:6; }
+      .tool-tray div { position:absolute; top:52px; width:130px; height:18px; border-radius:12px; background:#8D8177; }
+      .tool-tray span { position:absolute; top:20px; width:24px; height:38px; border-radius:8px; background:#F5F0E9; }.tool-tray span:nth-of-type(1){left:15px}.tool-tray span:nth-of-type(2){left:53px;height:48px;top:10px}.tool-tray span:nth-of-type(3){left:92px}
+      .focus-tag { position:absolute; left:32px; bottom:130px; padding:14px 20px; border-radius:30px; background:rgba(23,37,31,.92); color:#F5F0E9; font-size:16px; letter-spacing:.12em; z-index:12; }
+      .focus-tag span { display:inline-block; width:10px; height:10px; border-radius:50%; background:#78D2B8; margin-right:8px; }
+      .incoming-chip { width: 92%; align-self: center; margin-top: -95px; min-height: 140px; z-index: 10; display: grid; grid-template-columns: 78px 1fr auto; gap: 20px; align-items: center; background: #17251F; color: #F5F0E9; padding: 26px; border-radius: 30px; box-shadow: 0 24px 60px rgba(23,37,31,.28); }
+      .chip-icon { width:70px; height:70px; border-radius:22px; background:#782A3B; display:grid; place-items:center; font-size:34px; transform:rotate(-25deg); }
+      .incoming-chip small { display:block; color:#E8A9B6; font-size:16px; letter-spacing:.15em; }.incoming-chip strong { display:block; margin-top:5px; font-size:25px; }.incoming-chip b { font-size:17px; color:#E8A9B6; letter-spacing:.1em; }
+      .insight { display:flex; justify-content:space-between; align-items:baseline; border-top:1px solid rgba(23,37,31,.22); padding-top:22px; font-size:21px; }.insight strong{font-size:25px;color:#008C69;}
+      .caption { position:absolute; left:72px; right:72px; bottom:250px; min-height:100px; display:flex; align-items:center; justify-content:center; text-align:center; font-size:50px; line-height:1.14; font-weight:700; letter-spacing:-.035em; color:#17251F; opacity:0; z-index:20; }
+      .caption mark { color:#008C69; background:none; }
+    </style>
+    <script src="../assets/vendor/gsap-3.14.2.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const problemTl = gsap.timeline({ paused: true });
+      problemTl.from(".problem-scene .topline", { scaleX: .45, opacity: 0, transformOrigin: "left", duration: .58, ease: "expo.out" }, .16);
+      problemTl.from(".problem-scene h1", { x: -70, opacity: 0, duration: .7, ease: "power4.out" }, .28);
+      problemTl.from(".problem-scene .treatment-card", { y: 90, opacity: 0, scale: .97, duration: .82, ease: "circ.out" }, .5);
+      problemTl.from(".problem-scene .esthetician", { x: 48, opacity: 0, duration: .62, ease: "power3.out" }, .82);
+      problemTl.from(".problem-scene .treatment-bed", { x: -42, opacity: 0, duration: .64, ease: "sine.out" }, .9);
+      problemTl.from(".problem-scene .plant", { y: 34, opacity: 0, rotation: 3, duration: .7, ease: "back.out(1.25)" }, 1.02);
+      problemTl.from(".problem-scene .incoming-chip", { x: 90, opacity: 0, scale: .95, duration: .48, ease: "expo.out" }, 1.45);
+      problemTl.from(".problem-scene .insight", { y: 22, opacity: 0, duration: .46, ease: "power2.out" }, 1.68);
+      problemTl.to(".problem-scene .arm-a", { rotation: 47, duration: 1.1, yoyo: true, repeat: 2, ease: "sine.inOut" }, 1.2);
+      problemTl.to(".problem-scene .arm-b", { rotation: -40, duration: 1.25, yoyo: true, repeat: 2, ease: "sine.inOut" }, 1.3);
+      problemTl.to(".problem-scene .incoming-chip", { x: 6, duration: .08, yoyo: true, repeat: 9, ease: "none" }, 2.0);
+      problemTl.fromTo("#problem-cap-1", { opacity:0, y:16 }, { opacity:1, y:0, duration:.25, ease:"power3.out" }, .72);
+      problemTl.to("#problem-cap-1", { opacity:0, duration:.12, ease:"power2.in" }, 1.83); problemTl.set("#problem-cap-1", { opacity:0 }, 1.95);
+      problemTl.fromTo("#problem-cap-2", { opacity:0, x:-20 }, { opacity:1, x:0, duration:.24, ease:"expo.out" }, 1.97);
+      problemTl.to("#problem-cap-2", { opacity:0, duration:.12, ease:"power2.in" }, 2.62); problemTl.set("#problem-cap-2", { opacity:0 }, 2.74);
+      problemTl.fromTo("#problem-cap-3", { opacity:0, scale:.96 }, { opacity:1, scale:1, duration:.26, ease:"back.out(1.3)" }, 2.76);
+      problemTl.to("#problem-cap-3", { opacity:0, duration:.12, ease:"power2.in" }, 3.48); problemTl.set("#problem-cap-3", { opacity:0 }, 3.6);
+      window.__timelines["scene-problem"] = problemTl;
+      problemTl.seek(0);
+    </script>
+  </div>
+</template>

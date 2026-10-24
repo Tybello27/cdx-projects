@@ -1,0 +1,59 @@
+<template id="scene-cta-template">
+  <div id="root" data-composition-id="scene-cta" data-width="1080" data-height="1920" class="scene cta-scene">
+    <div class="corner-shape" data-layout-ignore></div><div class="signal-ring" data-layout-ignore></div>
+    <div class="scene-content">
+      <div class="brand-row"><div class="brand-mark">BW</div><span>AI AUTOMATION FOR BEAUTY BUSINESSES</span></div>
+      <div class="headline-block">
+        <span class="kicker">THE BUSINESS OUTCOME</span>
+        <h1>LESS<br><em>INTERRUPTION.</em></h1>
+        <h2>MORE BOOKING<br>OPPORTUNITIES.</h2>
+      </div>
+      <div class="benefit-row"><div><i>01</i><span>YOUR TEAM</span><strong>Stays focused</strong></div><div><i>02</i><span>YOUR CALLS</span><strong>Still get answered</strong></div></div>
+      <div class="cta-card">
+        <div class="phone-symbol">⌕</div>
+        <div><small>WANT TO HEAR THE FULL DEMO?</small><strong>DM “DEMO”</strong><p>@buildwith_ty</p></div>
+        <div class="arrow">↗</div>
+      </div>
+      <div class="footer"><span>MEDSPA EDITION / 01</span><b>BUILT TO BE REUSED</b></div>
+    </div>
+    <div class="caption" id="cta-cap-1">Your team stays <mark>focused.</mark></div>
+    <div class="caption" id="cta-cap-2">Incoming calls still get answered.</div>
+    <div class="caption" id="cta-cap-3">Want to hear the full demo?</div>
+    <div class="caption" id="cta-cap-4">DM <mark>demo.</mark></div>
+    <style>
+      @font-face{font-family:"Manrope";src:url("../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-style:normal}
+      #root{position:relative;width:1080px;height:1920px;overflow:hidden;background:#F5F0E9;color:#17251F;font-family:"Manrope",sans-serif}#root *{box-sizing:border-box}.scene-content{width:100%;height:100%;padding:180px 74px 280px;display:flex;flex-direction:column;gap:40px;position:relative;z-index:2}
+      .corner-shape{position:absolute;width:760px;height:760px;border-radius:50%;right:-420px;top:-300px;background:#C7D6CD;opacity:.6}.signal-ring{position:absolute;width:620px;height:620px;border:2px solid rgba(0,140,105,.18);border-radius:50%;left:-380px;bottom:80px;box-shadow:0 0 0 70px rgba(0,140,105,.05),0 0 0 150px rgba(0,140,105,.025)}
+      .brand-row{display:flex;align-items:center;gap:20px;font-size:17px;letter-spacing:.13em;font-weight:700}.brand-mark{width:64px;height:64px;border-radius:20px;background:#17251F;color:#F5F0E9;display:grid;place-items:center;font-size:19px;letter-spacing:-.04em}
+      .headline-block{margin-top:45px}.kicker{font-size:18px;letter-spacing:.16em;color:#00795B;font-weight:800}.headline-block h1{margin:22px 0 0;font-size:110px;line-height:.88;letter-spacing:-.06em;font-weight:800}.headline-block h1 em{display:block;font-style:normal;color:#008C69}.headline-block h2{margin:32px 0 0;font-size:69px;line-height:.96;letter-spacing:-.05em;font-weight:300}
+      .benefit-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}.benefit-row>div{padding:26px 24px 28px;border-top:2px solid #17251F}.benefit-row i{font-style:normal;font-size:17px;color:#00795B}.benefit-row span{display:block;margin-top:28px;font-size:15px;letter-spacing:.14em;color:#597067}.benefit-row strong{display:block;margin-top:7px;font-size:25px}
+      .cta-card{margin-top:auto;min-height:230px;padding:34px;display:grid;grid-template-columns:92px 1fr 70px;gap:25px;align-items:center;background:#17251F;color:#F5F0E9;border-radius:42px;box-shadow:0 30px 70px rgba(23,37,31,.22)}.phone-symbol{width:86px;height:86px;border-radius:28px;background:#008C69;display:grid;place-items:center;font-size:38px;transform:rotate(-28deg)}.cta-card small{display:block;color:#C7D6CD;font-size:16px;letter-spacing:.12em}.cta-card strong{display:block;margin-top:10px;font-size:52px;color:#78D2B8;letter-spacing:-.045em}.cta-card p{margin:6px 0 0;font-size:24px}.arrow{width:62px;height:62px;border-radius:50%;border:1px solid rgba(245,240,233,.3);display:grid;place-items:center;font-size:32px}
+      .footer{display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid rgba(23,37,31,.2);font-size:15px;letter-spacing:.12em}.footer b{color:#00795B}
+      .caption{position:absolute;left:72px;right:72px;bottom:680px;min-height:100px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:48px;line-height:1.14;font-weight:700;letter-spacing:-.035em;color:#17251F;opacity:0;z-index:20}.caption mark{color:#00795B;background:none}
+    </style>
+    <script src="../assets/vendor/gsap-3.14.2.min.js"></script>
+    <script>
+      window.__timelines=window.__timelines||{};const ctaTl=gsap.timeline({paused:true});
+      ctaTl.from(".cta-scene .brand-row",{x:-54,opacity:0,duration:.52,ease:"expo.out"},.18);
+      ctaTl.from(".cta-scene .kicker",{x:-36,opacity:0,duration:.54,ease:"power3.out"},.34);
+      ctaTl.from(".cta-scene h1",{y:72,opacity:0,duration:.76,ease:"power4.out"},.46);
+      ctaTl.from(".cta-scene h2",{x:60,opacity:0,duration:.66,ease:"circ.out"},.72);
+      ctaTl.from(".cta-scene .benefit-row>div",{y:34,opacity:0,duration:.5,stagger:.13,ease:"sine.out"},1.04);
+      ctaTl.from(".cta-scene .cta-card",{scale:.91,y:75,opacity:0,duration:.74,ease:"back.out(1.22)"},1.42);
+      ctaTl.from(".cta-scene .phone-symbol",{scale:.35,rotation:-70,opacity:0,duration:.46,ease:"back.out(1.65)"},1.72);
+      ctaTl.from(".cta-scene .cta-card strong",{x:-30,opacity:0,duration:.48,ease:"expo.out"},1.86);
+      ctaTl.from(".cta-scene .arrow",{scale:.4,opacity:0,duration:.38,ease:"back.out(1.5)"},2.02);
+      ctaTl.from(".cta-scene .footer",{scaleX:.55,opacity:0,transformOrigin:"left",duration:.5,ease:"power2.out"},2.2);
+      ctaTl.fromTo("#cta-cap-1",{opacity:0,y:16},{opacity:1,y:0,duration:.24,ease:"power3.out"},.62);
+      ctaTl.to("#cta-cap-1",{opacity:0,duration:.12,ease:"power2.in"},1.62);ctaTl.set("#cta-cap-1",{opacity:0},1.74);
+      ctaTl.fromTo("#cta-cap-2",{opacity:0,x:-18},{opacity:1,x:0,duration:.26,ease:"expo.out"},1.76);
+      ctaTl.to("#cta-cap-2",{opacity:0,duration:.12,ease:"power2.in"},3.18);ctaTl.set("#cta-cap-2",{opacity:0},3.3);
+      ctaTl.fromTo("#cta-cap-3",{opacity:0,y:14},{opacity:1,y:0,duration:.26,ease:"circ.out"},3.32);
+      ctaTl.to("#cta-cap-3",{opacity:0,duration:.12,ease:"power2.in"},4.68);ctaTl.set("#cta-cap-3",{opacity:0},4.8);
+      ctaTl.fromTo("#cta-cap-4",{opacity:0,scale:.9},{opacity:1,scale:1,duration:.3,ease:"back.out(1.45)"},4.82);
+      ctaTl.to("#cta-cap-4",{opacity:0,duration:.16,ease:"power2.in"},6.78);ctaTl.set("#cta-cap-4",{opacity:0},6.94);
+      ctaTl.to(".cta-scene .scene-content",{opacity:.72,duration:.6,ease:"sine.in"},10.85);
+      window.__timelines["scene-cta"]=ctaTl;ctaTl.seek(0);
+    </script>
+  </div>
+</template>

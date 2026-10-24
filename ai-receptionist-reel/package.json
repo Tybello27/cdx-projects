@@ -1,0 +1,12 @@
+{
+  "name": "ai-receptionist-reel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "doctor": "HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium npx --yes hyperframes@0.8.192 doctor",
+    "dev": "HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium npx --yes hyperframes@0.8.192 preview",
+    "check": "HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium npx --yes hyperframes@0.8.192 check",
+    "render": "HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium npx --yes hyperframes@0.8.192 render",
+    "publish": "npx --yes hyperframes@0.8.192 publish"
+  }
+}

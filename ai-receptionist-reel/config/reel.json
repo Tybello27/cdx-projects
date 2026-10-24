@@ -1,0 +1,37 @@
+{
+  "project": "AI Receptionist — Medspa Reel",
+  "version": 1,
+  "canvas": { "width": 1080, "height": 1920, "fps": 30, "duration": 36.2 },
+  "niche": "medspa",
+  "handle": "@buildwith_ty",
+  "voice": "af_heart",
+  "colors": {
+    "ivory": "#F5F0E9",
+    "forest": "#17251F",
+    "emerald": "#008C69",
+    "burgundy": "#782A3B",
+    "sage": "#C7D6CD"
+  },
+  "demo": {
+    "status": "pending",
+    "audioPath": "assets/audio/demo/real-ai-receptionist-call.wav",
+    "placeholderDuration": 10.8,
+    "label": "DEMO AUDIO PENDING"
+  },
+  "scenes": [
+    { "id": "hook", "start": 0, "duration": 4.7, "headline": "THAT MISSED CALL?" },
+    { "id": "problem", "start": 4.2, "duration": 6.1, "headline": "BUSY WITH A CLIENT?" },
+    { "id": "solution", "start": 9.7, "duration": 4.6, "headline": "MEET YOUR AI RECEPTIONIST." },
+    { "id": "demo", "start": 13.6, "duration": 11.4, "headline": "DEMO AUDIO PENDING" },
+    { "id": "cta", "start": 24.4, "duration": 11.8, "headline": "LESS INTERRUPTION." }
+  ],
+  "audio": {
+    "narration": [
+      "assets/audio/narration/scene-01-hook.wav",
+      "assets/audio/narration/scene-02-problem.wav",
+      "assets/audio/narration/scene-03-solution.wav",
+      "assets/audio/narration/scene-05-cta.wav"
+    ],
+    "music": "assets/audio/music/original-ambient-bed.wav"
+  }
+}

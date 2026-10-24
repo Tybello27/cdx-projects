@@ -1,0 +1,93 @@
+<template id="scene-hook-template">
+  <div id="root" data-composition-id="scene-hook" data-width="1080" data-height="1920" class="scene hook-scene">
+    <div class="ambient ambient-a" data-layout-ignore></div>
+    <div class="ambient ambient-b" data-layout-ignore></div>
+    <div class="scene-content">
+      <div class="eyebrow"><span></span> THE CALL YOU DIDN'T CATCH</div>
+      <h1>THAT <em>MISSED CALL?</em></h1>
+      <div class="phone-shell">
+        <div class="speaker"></div>
+        <div class="status"><b>9:41</b><span>● ● ●</span></div>
+        <div class="incoming-state">
+          <div class="call-icon">↗</div>
+          <div class="call-label">INCOMING CALL</div>
+          <div class="caller">NEW CLIENT</div>
+          <div class="location">Medspa enquiry</div>
+          <div class="call-actions">
+            <div class="action decline"><span>×</span><small>Decline</small></div>
+            <div class="action accept"><span>⌕</span><small>Accept</small></div>
+          </div>
+        </div>
+        <div class="missed-state">
+          <div class="missed-dot"></div>
+          <div><small>MISSED CALL</small><strong>NEW CLIENT</strong><p>just now</p></div>
+        </div>
+      </div>
+      <div class="booking-line"><span>Could this have been</span><strong>YOUR NEXT BOOKING?</strong></div>
+    </div>
+    <div class="caption" id="hook-cap-1">That <mark>missed call?</mark></div>
+    <div class="caption" id="hook-cap-2">It could have been</div>
+    <div class="caption" id="hook-cap-3">your next <mark>booking.</mark></div>
+    <style>
+      @font-face { font-family: "Manrope"; src: url("../assets/fonts/manrope-latin-wght-normal.woff2") format("woff2"); font-weight: 200 800; font-style: normal; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #17251F; color: #F5F0E9; font-family: "Manrope", sans-serif; }
+      #root * { box-sizing: border-box; }
+      #root .scene-content { width: 100%; height: 100%; padding: 190px 78px 310px; display: flex; flex-direction: column; align-items: flex-start; gap: 34px; position: relative; z-index: 2; }
+      .ambient { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .22; }
+      .ambient-a { width: 580px; height: 580px; right: -240px; top: 120px; background: #008C69; }
+      .ambient-b { width: 480px; height: 480px; left: -280px; bottom: 280px; background: #782A3B; opacity: .16; }
+      .eyebrow { font-size: 22px; letter-spacing: .16em; font-weight: 700; display: flex; align-items: center; gap: 14px; color: #C7D6CD; }
+      .eyebrow span { width: 54px; height: 3px; background: #008C69; display: inline-block; }
+      h1 { margin: 0; max-width: 900px; font-size: 108px; line-height: .94; letter-spacing: -.055em; font-weight: 800; }
+      h1 em { display: block; color: #E8A9B6; font-style: normal; }
+      .phone-shell { width: 660px; height: 830px; margin: 30px auto 0; align-self: center; border: 3px solid rgba(245,240,233,.5); border-radius: 86px; padding: 48px 38px; background: rgba(245,240,233,.075); box-shadow: 0 38px 90px rgba(0,0,0,.33), inset 0 0 0 10px rgba(255,255,255,.025); position: relative; backdrop-filter: blur(20px); }
+      .speaker { width: 130px; height: 15px; border-radius: 20px; background: rgba(245,240,233,.28); position: absolute; top: 24px; left: 50%; transform: translateX(-50%); }
+      .status { display: flex; justify-content: space-between; font-size: 20px; opacity: .72; }
+      .incoming-state { height: 690px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; }
+      .call-icon { width: 110px; height: 110px; border-radius: 34px; background: #008C69; display: grid; place-items: center; font-size: 52px; box-shadow: 0 20px 42px rgba(0,140,105,.3); }
+      .call-label { margin-top: 22px; font-size: 20px; letter-spacing: .18em; color: #C7D6CD; }
+      .caller { font-size: 54px; font-weight: 800; letter-spacing: -.035em; }
+      .location { font-size: 27px; color: #C7D6CD; }
+      .call-actions { width: 100%; margin-top: 70px; display: flex; justify-content: space-around; }
+      .action { display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: 20px; }
+      .action span { width: 88px; height: 88px; display: grid; place-items: center; border-radius: 50%; font-size: 46px; }
+      .decline span { background: #782A3B; } .accept span { background: #008C69; transform: rotate(-28deg); }
+      .missed-state { position: absolute; left: 38px; right: 38px; top: 185px; min-height: 160px; padding: 30px; display: flex; align-items: center; gap: 24px; background: #F5F0E9; color: #17251F; border-radius: 30px; opacity: 0; box-shadow: 0 22px 55px rgba(0,0,0,.35); }
+      .missed-dot { width: 68px; height: 68px; flex: 0 0 auto; border-radius: 22px; background: #782A3B; position: relative; }
+      .missed-dot:after { content: "×"; position: absolute; inset: 0; display: grid; place-items: center; color: white; font-size: 42px; }
+      .missed-state small { font-size: 17px; letter-spacing: .16em; color: #782A3B; font-weight: 800; display: block; }
+      .missed-state strong { font-size: 34px; display: block; margin-top: 5px; }
+      .missed-state p { margin: 4px 0 0; color: #597067; font-size: 20px; }
+      .booking-line { width: 100%; display: flex; justify-content: space-between; align-items: baseline; padding-top: 8px; border-top: 1px solid rgba(245,240,233,.2); }
+      .booking-line span { color: #C7D6CD; font-size: 23px; } .booking-line strong { color: #78D2B8; font-size: 27px; letter-spacing: -.02em; }
+      .caption { position: absolute; left: 72px; right: 72px; bottom: 250px; min-height: 100px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 52px; line-height: 1.12; font-weight: 700; letter-spacing: -.035em; color: #F5F0E9; opacity: 0; z-index: 8; text-shadow: 0 3px 18px rgba(0,0,0,.32); }
+      .caption mark { color: #78D2B8; background: none; }
+    </style>
+    <script src="../assets/vendor/gsap-3.14.2.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const hookTl = gsap.timeline({ paused: true });
+      hookTl.from(".hook-scene .eyebrow", { x: -48, opacity: .35, duration: .48, ease: "expo.out" }, .18);
+      hookTl.from(".hook-scene h1", { y: 62, opacity: .28, duration: .68, ease: "power4.out" }, .28);
+      hookTl.from(".hook-scene .phone-shell", { y: 100, scale: .9, opacity: .18, rotation: -2, duration: .8, ease: "back.out(1.22)" }, .5);
+      hookTl.from(".hook-scene .call-icon", { scale: .35, opacity: 0, duration: .38, ease: "back.out(1.8)" }, .82);
+      hookTl.from(".hook-scene .caller", { y: 24, opacity: 0, duration: .42, ease: "power3.out" }, .95);
+      hookTl.from(".hook-scene .call-actions", { y: 30, opacity: 0, duration: .52, ease: "circ.out" }, 1.08);
+      hookTl.from(".hook-scene .booking-line", { scaleX: .6, transformOrigin: "left", opacity: 0, duration: .54, ease: "sine.out" }, 1.18);
+      hookTl.to(".hook-scene .phone-shell", { x: 8, duration: .07, yoyo: true, repeat: 15, ease: "none" }, .72);
+      hookTl.to(".hook-scene .incoming-state", { opacity: 0, scale: .96, duration: .24, ease: "power3.in" }, 2.72);
+      hookTl.fromTo(".hook-scene .missed-state", { opacity: 0, y: -18, scale: .97 }, { opacity: 1, y: 0, scale: 1, duration: .42, ease: "expo.out" }, 2.88);
+      hookTl.fromTo("#hook-cap-1", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: .24, ease: "power3.out" }, .52);
+      hookTl.to("#hook-cap-1", { opacity: 0, duration: .12, ease: "power2.in" }, 1.28);
+      hookTl.set("#hook-cap-1", { opacity: 0 }, 1.4);
+      hookTl.fromTo("#hook-cap-2", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: .24, ease: "expo.out" }, 1.42);
+      hookTl.to("#hook-cap-2", { opacity: 0, duration: .12, ease: "power2.in" }, 2.05);
+      hookTl.set("#hook-cap-2", { opacity: 0 }, 2.17);
+      hookTl.fromTo("#hook-cap-3", { opacity: 0, scale: .96 }, { opacity: 1, scale: 1, duration: .25, ease: "back.out(1.35)" }, 2.18);
+      hookTl.to("#hook-cap-3", { opacity: 0, duration: .12, ease: "power2.in" }, 2.91);
+      hookTl.set("#hook-cap-3", { opacity: 0 }, 3.03);
+      window.__timelines["scene-hook"] = hookTl;
+      hookTl.seek(0);
+    </script>
+  </div>
+</template>
