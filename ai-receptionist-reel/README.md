@@ -6,6 +6,10 @@ The current output is intentionally a **review draft**: the real receptionist ca
 
 The final CTA asks viewers to comment `DEMO` so `@buildwith_ty` can send the full demonstration. It does not claim that automated comment replies are connected.
 
+## Download the rendered Reel
+
+The verified MP4 is tracked at `downloads/AI-Receptionist-Instagram-Reel.mp4` so it can be downloaded directly from GitHub.
+
 ## Quick start
 
 Requirements: Node.js 22+, npm, FFmpeg/FFprobe, Chromium, Python 3.8+, and the project `.venv` described below.

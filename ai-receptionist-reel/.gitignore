@@ -4,6 +4,8 @@ node_modules/
 .cache/
 renders/
 *.mp4
+!downloads/
+!downloads/AI-Receptionist-Instagram-Reel.mp4
 *.webm
 *.mov
 *.zip
